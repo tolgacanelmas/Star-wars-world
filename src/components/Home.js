@@ -4,7 +4,7 @@ import '../assets/css/index.css'
 
 function Home() {
 
-    return (
+    return ( 
         <div className="home">
             <img src={'/images/bg.jpg'} />
             <div>

@@ -56,7 +56,7 @@ function Person(props) {
                     <img src={`/images/${person.image}`} />
                 </picture>
                 <div className="person-info">
-                    {renderCharInfo()}
+                    {renderCharInfo()} 
                 </div>
                 <div className="person-planet">
                     <h3>
