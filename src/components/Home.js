@@ -6,8 +6,11 @@ function Home() {
 
     return (
         <div className="home">
-            <h1>WELCOME</h1>
-            <Link to="/people">CHOOSE YOUR CHARACTER</Link>
+            <img src={'/images/bg.jpg'} />
+            <div>
+                <h1>WELCOME</h1>
+                <Link to="/people">CHOOSE YOUR CHARACTER</Link>
+            </div>
         </div>
     )
 }

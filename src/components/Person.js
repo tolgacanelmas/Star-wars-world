@@ -23,13 +23,31 @@ function Person(props) {
 
     if (homeWorld == null) return null
 
-    const name = `Name : ${person.name}`
-    const gender = `Gender : ${person.gender}`
-    const born = `Born : ${homeWorld.name}`
-    const mass = `Mass : ${person.mass}`
-    const height = `Height : ${person.height}`
-    const skinColor = `Skin Color : ${person.skin_color}`
-    const hairColor = `Hair Color : ${person.hair_color}`
+    const renderCharInfo = () => {
+        return (
+            <div>
+                <h3>
+                    Name : {person.name}
+                </h3>
+                <div>
+                    Gender : {person.gender}
+                </div>
+
+                <div>
+                    Height : {person.height}
+                </div>
+                <div>
+                    Mass : {person.mass}
+                </div>
+                <div>
+                    Skin Color : {person.skin_color}
+                </div>
+                <div>
+                    Hair Color : {person.hair_color}
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className="person-container">
@@ -38,42 +56,26 @@ function Person(props) {
                     <img src={`/images/${person.image}`} />
                 </picture>
                 <div className="person-info">
-                    <h3>
-                        {name}
-                    </h3>
-                    <div>
-                        {gender}
-                    </div>
-
-                    <div>
-                        {height}
-                    </div>
-                    <div>
-                        {mass}
-                    </div>
-                    <div>
-                        {skinColor}
-                    </div>
-                    <div>
-                        {hairColor}
-                    </div>
+                    {renderCharInfo()}
                 </div>
                 <div className="person-planet">
                     <h3>
-                        {born}
+                        Born : {homeWorld.name}
                     </h3>
                     <picture className="person-planet-img">
                         <img src={`/images/${homeWorld.name}.jpg`} />
                     </picture>
                 </div>
             </div>
-            <button className="btn btn-info">Select Character</button>
-            <Link to="/people">
-                <button className="btn btn-info">
-                    Back to Characters
+            <div className="select-buttons">
+                <button className="btn btn-primary">Select Character</button>
+                <Link to="/people">
+                    <button className="btn btn-danger">
+                        Back to Characters
                 </button>
 
-            </Link>
+                </Link>
+            </div>
         </div >
     )
 
